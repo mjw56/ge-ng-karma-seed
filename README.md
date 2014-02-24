@@ -1,16 +1,10 @@
-# AngularJS Karma Seed for Goal Explorer Prototype #
+# AngularJS Karma Seed #
+Seed repository to get started with testing the Goal Explorer prototype with karma.
 
-## Overview ##
-This is a seed repository which contains everything needed to start testing the Goal Explorer prototype with karma.
-
-## Dependency ##
-..* [node.js](http://nodejs.org "node")
+## Dependencies ##
+[node.js](http://nodejs.org "node")
 
 ## Details ##
-This section will walk through the files contained in the repository.
-
----
-
 ### `package.json`
 
 The 'devDependencies' object contains the required node packages which will do all the heavy lifting for testing the application. You can find out more information for any of the packages by visiting [npm](https://www.npmjs.org "npm") and searching for the package name.
