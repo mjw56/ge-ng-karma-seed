@@ -15,10 +15,10 @@ This Gruntfile only contains the necessities for testing an angular application 
 
 ### `test/`
 
-This directory contains all the important configuration files for karma. Of important note is the shared configuration file which is where all of the relevant javascript files to be tested are included. Then, there are two other configuration files for e2e (end to end) and unit testing. The unit and e2e tests are split into their own folders, each contained the necessary files for testing. I have included specs for both folders which work on the Goals Conversation module. matsko from the angular core dev team gave a [great walkthrough of testing an angular js application](http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html "Full Spectrum Testing with AngularJS and Karma").
+This directory contains all the important configuration files for karma and also all of the test specs. The shared configuration file is where all of the javascript files to be tested are included. Then, there are two other configuration files for e2e (end to end) and unit testing which contain the respective test files. The unit and e2e test files are split into their own folders. I have included working specs for both folders which currently only test the Goals Conversation feature. Matsko from the angular core dev team gave a [great walkthrough of testing an angular js application](http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html "Full Spectrum Testing with AngularJS and Karma"). This seed repository was based off his article and I recommend reading it as he does a great job of going into the details of how to test an angular application with karma. 
 
 ## Installation ##
-Clone this repository or download the zip file. _The Gruntfile.js, package.json and test directory all need to reside in the root of the Goal Explorer application in order to work correctly_**. Also, in order for karma to be made aware of the goalExplorer module we will need to place it on the window scope in goalsApp.js:
+Clone this repository or download the zip file. **_The Gruntfile.js, package.json and test directory all need to reside in the root of the Goal Explorer application in order to work correctly_**. Also, in order for karma to be made aware of the goalExplorer module we will need to place it on the window scope in goalsApp.js:
 
 ```javascript
 var goalExplorer = window.goalExplorer = angular.module('goalExplorer', ....);
@@ -36,7 +36,7 @@ $ grunt test
 ```
 
 ## Usage ##
-This repository contains grunt tasks for running either unit tests, e2e tests, or running both. Similarly, we can do the same thing while attaching a live listener to the javascript files which we are testing. This can allow the tests to execute immediately after any change has been detected on files which are being watched. Watched files are defined in karma-shared-conf.js.
+This repository contains grunt tasks for running either unit tests, e2e tests, or running both. Similarly, we can do the same thing while attaching a live listener to the javascript files which we are testing. This can allow the tests to execute immediately after any change has been detected on files which are being watched. Watched files can be defined in karma-shared-conf.js.
 
 Run Tests:
 ```bash
